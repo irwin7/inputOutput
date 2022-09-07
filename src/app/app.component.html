@@ -1,1 +1,3 @@
-<h1>its proji</h1>
+<h1>Post</h1>
+<app-post-input (addPost)="updatePost($event)"></app-post-input>
+<app-post-create *ngFor="let post of posts" [post]="post"></app-post-create>

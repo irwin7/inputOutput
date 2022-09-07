@@ -1,2 +1,5 @@
-<input type="text" >
-<button>submit</button>
+<div>
+    <input class="form-control" type="text" placeholder="Title..." [(ngModel)]="title" #titleInp>
+    <input class="form-control" type="text" placeholder="Text..." [(ngModel)]="text" #textInp>
+    <button class="btn" (click)="submit()">Publish</button>
+</div>

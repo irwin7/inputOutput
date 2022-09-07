@@ -1,21 +1,24 @@
 import { Component } from '@angular/core';
-
+export interface Post{
+  title:string
+  text:string
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  post = [
-    {
-      title: 'wowo',
-      text: 'lorem ipsum doler....'
-    },
-    {
-      title: 'yahoo',
-      text: 'lorem ipsum doler....'
-    }
+
+  posts:Post[] = [
+    {title:'wow super',text:'new express can inlude'},
+    {title:'wow ssss',text:'new express can inlude'}
   ]
+
+  updatePost(post:Post){
+    this.posts.unshift(post);
+    console.log(this.posts);
+    
+  }
 
 }
